@@ -1,0 +1,31 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+    font-style:normal;
+    font-size: 15px;
+}
+body{
+    margin: 5px;
+    font-size: 15px;
+    text-align: left;
+}
+button{
+    margin:1px;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 10px;
+    border:none;
+}
+button:hover{
+    background-color:rgb(161, 231, 222);
+    cursor: pointer;
+}
+
+.pad{
+    padding-top: 50px;
+}
+.hidden {
+    display: none;
+  }

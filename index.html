@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap"rel="stylesheet"/>
+    <script src="myscript.js" defer></script>
+</head>
+
+<body>
+    Orundum Estimater
+    <div>
+        <label for="dateInput">Current Orundum:</label>
+        <input type="number" id="currency1" name="currency1"oninput="updateResults()">
+        <br>
+        <label for="dateInput">Current Originite:</label>
+        <input type="number" id="currency2" name="currency2"oninput="updateResults()">
+    </div>
+    <div>
+        <label for="dateInput">Start Date:</label>
+        <input type="date" id="dateInput1" name="dateInput1"oninput="updateResults()">
+
+        <input type="checkbox" id="todayCheckbox" name="todayCheckbox" onchange="setToday('dateInput1', 'todayCheckbox')">
+        <label for="todayCheckbox">Set to Today</label>
+    
+        <br>
+
+        <label for="enddate">End Date:</label>
+        <input type="date" id="enddate" name="enddate"oninput="updateResults()">
+    </div>
+    <div>
+        <input type="checkbox" id="card"value="true" onchange="toggleVisibility('daysleft1', 'card')">
+        <label for="card">Monthly Card?</label>
+        <div id="daysleft1" class="hidden">
+            <label for="daysleft">Days Left:</label>
+            <input type="number" id="daysleft"oninput="updateResults()">
+        </div>
+    
+        <br>
+        <input type="checkbox" id="daily"value="true"oninput="updateResults()">
+        <label for="daily">Always complete daily missions?</label>
+        <br>
+        <input type="checkbox" id="weekly"value="true"oninput="updateResults()">
+        <label for="weekly">Always complete weekly missions?</label>
+        <br>
+        <input type="checkbox" id="anni"value="true"oninput="updateResults()">
+        <label for="anni">Always complete weekly annihilation?</label>
+    </div>
+    <div id="results">
+        <p id="days">Days: </p>
+        <p id="dailies">Orundum from Dailies:       </p>
+        <p id="weeklies">Orundum from Weeklies:     </p>
+        <p id="annis">Orundum from Annihilations:   </p>
+        <p id="cards">Orundum from Monthly Card:    </p>
+        <p id="finalBal">Estimated Final Balance:   </p>
+    </div> 
+
+</body>
+
+<script>
+  updateResults();
+</script>
+
+
+</html>

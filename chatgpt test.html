@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Calculator</title>
+  <script>
+    function updateResults() {
+      var number1 = document.getElementById('number1').value;
+      var number2 = document.getElementById('number2').value;
+
+      // Ensure that the input values are valid numbers
+      if (!isNaN(number1) && !isNaN(number2)) {
+        var sum = parseFloat(number1) + parseFloat(number2);
+        var difference = parseFloat(number1) - parseFloat(number2);
+        var product = parseFloat(number1) * parseFloat(number2);
+        var quotient = parseFloat(number1) / parseFloat(number2);
+
+        // Display the results
+        document.getElementById('sum').innerHTML = `Sum: ${sum}`;
+        document.getElementById('difference').innerHTML = `Difference: ${difference}`;
+        document.getElementById('product').innerHTML = `Product: ${product}`;
+        document.getElementById('quotient').innerHTML = `Quotient: ${quotient}`;
+      } else {
+        // Display an error message if the input values are not valid numbers
+        document.getElementById('results').innerHTML = 'Invalid input. Please enter valid numbers.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Number input fields with event listeners -->
+  <label for="number1">Number 1:</label>
+  <input type="number" id="number1" name="number1" oninput="updateResults()">
+
+  <label for="number2">Number 2:</label>
+  <input type="number" id="number2" name="number2" oninput="updateResults()">
+
+  <!-- Result container -->
+  <div id="results">
+    <p id="sum">Sum: </p>
+    <p id="difference">Difference: </p>
+    <p id="product">Product: </p>
+    <p id="quotient">Quotient: </p>
+  </div>
+</body>
+</html>
